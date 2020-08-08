@@ -32,10 +32,14 @@ def createFile (path)
 	if File.file?(path)
 		return false
 	else
-		my_dir = Dir["/Users/navpreetsingh/Documents/Snippets/dump/#{last}"]
-		my_dir.each do |filename|
-  			FileUtils.cp(filename, path)
-		end
+		#for other utils
+		#my_dir = Dir["/Users/navpreetsingh/Documents/Snippets/dump/#{last}"]
+		#my_dir.each do |filename|
+  		#	FileUtils.cp(filename, path)
+		#end
+		out_file = File.new(path, "w")
+		out_file.puts("write your stuff here")
+		out_file.close
 		return true
 	end
 end
